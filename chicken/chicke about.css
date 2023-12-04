@@ -1,0 +1,732 @@
+:root{
+    --yellow: #fff212;
+    --red: #ff0000;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+ header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: #00000033;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+ }
+ 
+ 
+ header img{
+    width: 128px;
+    height: 100%;
+ }
+ 
+ 
+
+ header .deskop-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+ }
+ header nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+ header nav li{
+    list-style: none;
+ }
+ header nav li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 850;
+    font-size: 14px;
+    position: relative;
+    margin-left: 20px;
+    font-family: sans-serif;
+ }
+
+ header nav li a::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 5px;
+    background-color: red;
+    width: 0;
+ }
+ header nav li a:hover::after{
+    width: 100%;
+ }
+
+ /* img {
+    width: 100%;
+    height: 700px;
+ } */
+ header .social{
+    width: 10%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+ }
+ header .social i{
+    font-size: 30px;
+    color: white;
+ }
+.cta {
+    width: 15%;
+    height: 90px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.cta .upper{
+    width: 100%;
+    height: 70%;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta .upper .avater{
+    width: 19%;
+    height: 65%;
+    border: solid var(--yellow) 3px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 9px;
+}
+
+.cta .upper .texts{
+    height: 65%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta .upper .texts .order{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+}
+
+
+.cta .upper .texts .online{
+    font-size: 25px;
+text-transform: uppercase;
+color: var(--yellow);
+font-weight: 900;
+}
+
+.cta .lower{
+    height: 30%;
+    width: 100%;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta .lower span{
+    font-size: 25px;
+    font-weight: 70;
+    color: var(--red);
+}
+
+.cta:hover .upper{
+    background-color: var(--yellow);
+    color: var(--red);
+}
+
+.cta:hover .upper .avater{
+    border: solid white 3px;
+    background-color: var(--red);
+    color: white;
+}
+
+.cta:hover .upper .texts span{
+    color: var(--red);
+}
+
+.cta:hover .lower{
+    background-color: var(--red);
+}
+
+.cta:hover .lower span{
+    color: white;
+}
+
+.main-container{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.main-container #hero-image{
+    width: 100%;
+    height: 510px;
+}
+
+
+.main-container .chicken{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+ .chicken .hh{
+    width: 14%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+ }
+
+ .chicken .hh h1{
+    font-size: 26px;
+    font-weight: 600;
+    color: #ff0000;
+    font-family: sans-serif;
+ }
+ .hh:hover{
+    background-color: red;
+ }
+ .hh:hover h1{
+    color: #ffffff;
+ } 
+
+ .chicken .hot{
+    width: 70%;
+    height: px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ }
+ .chicken .hot div{
+    width: 120px;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+ }
+ .chicken .hot div img{
+    width: 80px;
+    height: 70px;
+ }
+
+ .chicken .hot div p{
+    font-size: 11px;
+    color: #783233;
+    font-family: sans-serif;
+    font-weight: 700;
+ }
+ .hot div:hover p{
+    color: red;
+ }
+ .chicken .hot .treats{
+    width: 150px;
+ }
+
+.taste{
+    width: 100%;
+    height: 90px;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 250px;
+}
+
+.taste img{
+   width: 90px;
+   height: 80px;
+}
+.taste h1{
+   color: white;
+   font-size: 30px;
+   font-family: sans-serif;
+   font-weight: 700;
+}
+
+.main-container .meals{
+   width: 100%;
+   height: 350px;
+   background-color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.main-container .meals .gta{
+   width: 23%;
+   height: 280px;
+   background-color: rgb(182, 178, 178);
+   text-decoration: none;
+}
+
+.main-container .meals .gta img{
+   width: 100%;
+   height: 170px;
+}
+
+.main-container .meals .gta div{
+   width: 100%;
+   height: 105px;
+   padding: 10px;
+   gap: 40px;
+   padding-top: 13px;
+}
+
+.main-container .meals .gta div span{
+   width: 100%;
+   height: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-container .meals .gta div span h3{
+   font-size: 13px;
+    color: #b93538;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.main-container .meals .gta div p{
+   font-size: 14px;
+   color: #727376;
+   font-weight: 700;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   margin-top: 6px;
+}
+.main-container .meals .gta div button{
+   width: 80px;
+   height: 25px;
+   background-color: red;
+   border: none;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   bottom: 87px;
+   left: 260px;
+}
+
+.main-container .meals .gta div button h1{
+   color: white;
+   font-size: 14px;
+}
+
+.main-container .meals .gta div:hover button{
+   background-color: yellow;
+   border: 2px solid red;
+}
+
+.main-container .meals .gta div:hover button h1{
+   color: red;
+}
+
+.fried{
+   width: 100%;
+   height: 90px;
+   background-color: #ff9100;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding-right: 250px;
+}
+
+.fried img{
+  width: 90px;
+  height: 80px;
+}
+.fried h1{
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.main-container .dinner{
+   width: 100%;
+   height: 350px;
+   background-color: #ebecec;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.main-container .dinner .bta{
+   width: 23%;
+   height: 280px;
+   background-color: rgb(182, 178, 178);
+   text-decoration: none;
+}
+
+.main-container .dinner .bta img{
+   width: 100%;
+   height: 170px;
+
+}
+
+.main-container .dinner .bta .molt{
+   width: 100%;
+   height: 105px;
+   display: flex;
+   flex-direction: row;
+}
+
+.main-container .dinner .bta .molt .refuel{
+   width: 70%;
+   height: 100%;
+   padding: 10px;
+}
+
+.main-container .dinner .bta .molt .refuel span{
+   width: 100%;
+   height: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-container .dinner .bta .molt .refuel span h3{
+   font-size: 12px;
+    color: #b93538;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.main-container .dinner .bta .molt .refuel p{
+   color: #727376;
+   font-size: 13.2px;
+   margin-top: 6px;
+}
+
+.main-container .dinner .bta .molt .lop {
+   width: 30%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 20px;
+}
+
+.main-container .dinner .bta .molt .lop h3{
+   font-size: 10.5px;
+   color: #b93538;
+   font-family: sans-serif;
+   font-weight: 800;
+}
+
+.main-container .dinner .bta .molt button{
+   width: 80px;
+   height: 25px;
+   background-color: red;
+   border: none;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   bottom: 16px;
+   right: 21px;
+}
+
+.main-container .dinner .bta .molt button h1{
+   color: white;
+   font-size: 14px;
+}
+
+.main-container .dinner .bta .molt:hover button{
+   background-color: yellow;
+   border: 2px solid red;
+}
+
+.main-container .dinner .bta .molt:hover button h1{
+   color: red;
+}
+
+.flame{
+   width: 100%;
+   height: 90px;
+   background-color: #201e1e;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding-right: 405px;
+}
+
+.flame img{
+  width: 90px;
+  height: 80px;
+}
+.flame h1{
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.main-container .grilled{
+   width: 100%;
+   height: 350px;
+   background-color: #ffffff;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.main-container .grilled .nta{
+   width: 23%;
+   height: 280px;
+   background-color: red;
+   text-decoration: none;
+}
+
+.main-container .grilled .nta img{
+   width: 100%;
+   height: 170px;
+}
+
+.main-container .grilled .nta div{
+   width: 100%;
+   height: 105px;
+   padding: 10px;
+   gap: 40px;
+   padding: 10px;
+}
+
+.main-container .grilled .nta div span{
+   width: 100%;
+   height: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-container .grilled .nta div span h3{
+   font-size: 13px;
+    color: yellow;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.main-container .grilled .nta div p{
+   font-size: 14px;
+   color: #ffffff;
+   font-weight: 700;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   margin-top: 6px;
+}
+
+.main-container .grilled .nta div button{
+   width: 80px;
+   height: 25px;
+   background-color: red;
+   border: none;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   bottom: 105px;
+   left: 260px;
+}
+
+.main-container .grilled .nta div button h1{
+   color: white;
+   font-size: 14px;
+}
+
+.main-container .grilled .nta div:hover button{
+   background-color: yellow;
+   border: 2px solid red;
+}
+
+.main-container .grilled .nta div:hover button h1{
+   color: red;
+}
+
+.delicious{
+   width: 100%;
+   height: 90px;
+   background-color: #cf0407;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding-right: 405px;
+}
+
+
+.delicious img{
+   width: 90px;
+   height: 80px;
+ }
+ .delicious h1{
+   color: white;
+   font-size: 30px;
+   font-family: sans-serif;
+   font-weight: 700;
+ }
+
+ .main-container .rott{
+   width: 100%;
+   height: 350px;
+   background-color: #ebecec;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+ }
+
+ .main-container .rott .vta{
+   width: 23%;
+   height: 280px;
+   background-color: #c9cacc;
+   text-decoration: none;
+}
+
+.main-container .rott .vta img{
+   width: 100%;
+   height: 170px;
+}
+
+.main-container .rott .vta div{
+   width: 100%;
+   height: 105px;
+   padding: 10px;
+   gap: 40px;
+   padding: 10px;
+}
+
+.main-container .rott .vta div span{
+   width: 100%;
+   height: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-container .rott .vta div span h3{
+   font-size: 13px;
+    color: #b93538;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.main-container .rott .vta div p{
+   font-size: 14px;
+   color: #727376;
+   font-weight: 700;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   margin-top: 6px;
+}
+
+.main-container .rott .vta div button{
+   width: 80px;
+   height: 25px;
+   background-color: red;
+   border: none;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   bottom: 105px;
+   left: 260px;
+}
+
+.main-container .rott .vta div button h1{
+   color: white;
+   font-size: 14px;
+}
+
+.main-container .rott .vta div:hover button{
+   background-color: yellow;
+   border: 2px solid red;
+}
+
+.main-container .rott .vta div:hover button h1{
+   color: red;
+}
